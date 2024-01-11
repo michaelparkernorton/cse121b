@@ -38,7 +38,7 @@ console.log(averageGPA);
 
 // Activity 4
 fruits = ['watermelon', 'peach', 'apple', 'tomato', 'grape']
-bigFruits = fruits.filter((fruit) => fruit.length >= 6)
+bigFruits = fruits.filter(fruit => fruit.length >= 6)
 console.log(bigFruits);
 
 // Activity 5
