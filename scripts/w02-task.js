@@ -18,7 +18,7 @@ const imageElement = document.querySelector('img')
 nameElement.innerHTML = `<strong>${fullName}</strong>`
 yearElement.textContent = currentYear
 imageElement.setAttribute('src', profilePicture)
-imageElement.setAttribute('alt', `Profile image of ${fileName}`)
+imageElement.setAttribute('alt', `Profile image of ${fullName}`)
 
 /* Step 5 - Array */
 let favFoods = ['mango', 'strawberry', 'blueberry', 'apple']
