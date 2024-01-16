@@ -292,10 +292,6 @@ footer {
     row-gap: 10px;
 }
 
-.col {
-    width: 50%;
-}
-
 .alert {
     padding: 20px;
     border: 1px solid gray;
