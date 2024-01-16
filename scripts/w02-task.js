@@ -4,7 +4,7 @@
 
 /* Step 2 - Variables */
 let fullName = "Michael Norton"
-let currentYear = "2024"
+let currentYear = new Date().getFullYear()
 let profilePicture = "images/profilepic300.png"
 let fileName = "profile picture"
 
