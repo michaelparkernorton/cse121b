@@ -279,6 +279,32 @@ footer {
     margin: .5rem;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rows {
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    row-gap: 10px;
+}
+
+.col {
+    width: 50%;
+}
+
+.alert {
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.alert-secondary {
+    background-color: #ccc;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {
