@@ -73,29 +73,29 @@ const array = []
 for (let index = 1; index < 14; index++) {
 	array.push(index);
 }
-anArray.textContent = array
+anArray.innerHTML = array
 
 /* Output Odds Only Array */
 const Odds = document.getElementById("odds")
 const odds = array.filter(number => number % 2 != 0)
-Odds.textContent = odds
+Odds.innerHTML = odds
 
 /* Output Evens Only Array */
 const Evens = document.getElementById("evens")
 const evens = array.filter(number => number % 2 == 0)
-Evens.textContent = evens
+Evens.innerHTML = evens
 
 /* Output Sum of Org. Array */
 const SumOfArray = document.getElementById("sumOfArray")
 const sum = array.reduce((accumlator, currentValue) => accumlator + currentValue)
-SumOfArray.textContent = sum
+SumOfArray.innerHTML = sum
 
 /* Output Multiplied by 2 Array */
 const Multiplied = document.getElementById("multiplied")
 const multiplied = array.map(number => number * 2)
-Multiplied.textContent = multiplied
+Multiplied.innerHTML = multiplied
 
 /* Output Sum of Multiplied by 2 Array */
 const SumOfMultiplied = document.getElementById("sumOfMultiplied")
 const sumOfMultiplied = multiplied.reduce((accumlator, currentValue) => accumlator + currentValue)
-SumOfMultiplied.textContent = sumOfMultiplied
+SumOfMultiplied.innerHTML = sumOfMultiplied
