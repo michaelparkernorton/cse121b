@@ -1,13 +1,13 @@
 /* LESSON 3 - Programming Tasks */
 
-let buttonAddNumbers = document.getElementById('addNumbers')
+const buttonAddNumbers = document.getElementById('addNumbers')
 buttonAddNumbers.addEventListener('click', addNumbers)
-let buttonSubtractNumbers = document.getElementById('subtractNumbers')
+const buttonSubtractNumbers = document.getElementById('subtractNumbers')
 buttonSubtractNumbers.addEventListener('click', subtractNumbers)
-let buttonMultipyNumbers = document.getElementById('multiplyNumbers')
-let buttonDivideNumbers = document.getElementById('divideNumbers')
+const buttonMultipyNumbers = document.getElementById('multiplyNumbers')
+const buttonDivideNumbers = document.getElementById('divideNumbers')
 buttonDivideNumbers.addEventListener('click', divideNumbers)
-let buttonGetTotalDue = document.getElementById('getTotal')
+const buttonGetTotalDue = document.getElementById('getTotal')
 buttonGetTotalDue.addEventListener('click', getTotal)
 
 /* FUNCTIONS */
@@ -23,25 +23,25 @@ divide = (number1, number2) => number1 / number2
 
 /* Function Definition - Add Numbers */
 function addNumbers() {
-	let add1 = Number(document.getElementById('add1').value)
-	let add2 = Number(document.getElementById('add2').value)
-	let sum = document.getElementById('sum')
+	const add1 = Number(document.getElementById('add1').value)
+	const add2 = Number(document.getElementById('add2').value)
+	const sum = document.getElementById('sum')
 	sum.value = add(add1, add2)
 }
 
 /* Function Expression - Subtract Numbers */
 function subtractNumbers() {
-	let subtract1 = Number(document.getElementById('subtract1').value)
-	let subtract2 = Number(document.getElementById('subtract2').value)
-	let difference = document.getElementById('difference')
+	const subtract1 = Number(document.getElementById('subtract1').value)
+	const subtract2 = Number(document.getElementById('subtract2').value)
+	const difference = document.getElementById('difference')
 	difference.value = subtract(subtract1, subtract2)
 }
 
 /* Arrow Function - Multiply Numbers */
 const multiplyNumbers = () => {
-  let product = document.getElementById('product')
-	let factor1 = Number(document.getElementById('factor1').value)
-	let factor2 = Number(document.getElementById('factor2').value)
+  const product = document.getElementById('product')
+	const factor1 = Number(document.getElementById('factor1').value)
+	const factor2 = Number(document.getElementById('factor2').value)
 	product.value = multiply(factor1, factor2)
 };
 
@@ -49,34 +49,53 @@ buttonMultipyNumbers.addEventListener('click', multiplyNumbers)
 
 /* Open Function Use - Divide Numbers */
 function divideNumbers() {	
-	let dividend = Number(document.getElementById('dividend').value)
-	let divisor = Number(document.getElementById('divisor').value)
-	let quotient = document.getElementById('quotient')
+	const dividend = Number(document.getElementById('dividend').value)
+	const divisor = Number(document.getElementById('divisor').value)
+	const quotient = document.getElementById('quotient')
 	quotient.value = divide(dividend, divisor)
 }
 
 /* Decision Structure */
-
 function getTotal() {	
-	let total = document.getElementById('total')
+	const total = document.getElementById('total')
+	const member = document.getElementById('member').checked
 	let subtotal = Number(document.getElementById('subtotal').value)
-	let member = document.getElementById('member').value
 	if (member) {
 		subtotal *= .85
 	}
-	total.textContent = `$${subtotal}`
-	console.log(subtotal, member);
+	total.textContent = `$${subtotal.toFixed(2)}`
 }
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
+const anArray = document.getElementById("array")
+const array = []
+for (let index = 1; index < 14; index++) {
+	array.push(index);
+}
+anArray.textContent = array
 
 /* Output Odds Only Array */
+const Odds = document.getElementById("odds")
+const odds = array.filter(number => number % 2 != 0)
+Odds.textContent = odds
 
 /* Output Evens Only Array */
+const Evens = document.getElementById("evens")
+const evens = array.filter(number => number % 2 == 0)
+Evens.textContent = evens
 
 /* Output Sum of Org. Array */
+const SumOfArray = document.getElementById("sumOfArray")
+const sum = array.reduce((accumlator, currentValue) => accumlator + currentValue)
+SumOfArray.textContent = sum
 
 /* Output Multiplied by 2 Array */
+const Multiplied = document.getElementById("multiplied")
+const multiplied = array.map(number => number * 2)
+Multiplied.textContent = multiplied
 
 /* Output Sum of Multiplied by 2 Array */
+const SumOfMultiplied = document.getElementById("sumOfMultiplied")
+const sumOfMultiplied = multiplied.reduce((accumlator, currentValue) => accumlator + currentValue)
+SumOfMultiplied.textContent = sumOfMultiplied
