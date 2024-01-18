@@ -20,22 +20,22 @@ myProfile.placesLived.push(
 
 myProfile.placesLived.push(
 	{
-		place: "Puerto Rico, Argentina",
-		length: "5 months"
-	}
-)
-
-myProfile.placesLived.push(
-	{
 		place: "Berryville, Virginia",
 		length: "26 years"
 	}
-)
-
+	)
+	
 myProfile.placesLived.push(
 	{
 		place: "Provo, Utah",
 		length: "8 years"
+	}
+	)
+	
+myProfile.placesLived.push(
+	{
+		place: "Puerto Rico, Argentina",
+		length: "5 months"
 	}
 )
 
