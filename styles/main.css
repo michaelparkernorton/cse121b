@@ -301,6 +301,10 @@ footer {
     background-color: #ccc;
 }
 
+#section3 > p {
+    align-self: start;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {
