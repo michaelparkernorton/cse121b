@@ -49,11 +49,30 @@ const filterTemples = (temples) => {
       break;
     case "older":
       displayTemples(
-        temples.filter((temple) => new Date(temple.dedicated) < new Date(1950, 0, 1))
+        temples.filter(
+          (temple) => new Date(temple.dedicated) < new Date(1950, 0, 1)
+        )
       );
       break;
+    case "alphabetic":
+      displayTemples(
+        temples.sort((a, b) => {
+          let fa = a.templeName.toLowerCase(),
+            fb = b.templeName.toLowerCase();
+
+          if (fa < fb) {
+            return -1;
+          }
+          if (fa > fb) {
+            return 1;
+          }
+          return 0;
+        })
+      );
+
+      break;
     case "all":
-      displayTemples(temples)
+      displayTemples(temples);
       break;
     default:
     // code block
