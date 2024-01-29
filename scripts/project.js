@@ -38,6 +38,7 @@ const displayGames = (games) =>
 /* Step 5 async getGames Function using fetch()*/
 const getGames = async () => {
   console.log('I made it inside getGames')
+  console.log(link);
   const response = await fetch(link);
   // const response = await fetch(link2);
   if (response.ok) {
