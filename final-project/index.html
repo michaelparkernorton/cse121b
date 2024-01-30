@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSE 121b | Project</title>
+    <title>CSE 121b | Project </title>
     <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,7 +33,20 @@
     </nav>
     <main id="home">
       <div class="container">
-        <div id="games"></div>
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time (ET)</th>
+              <!-- <th>Event</th> -->
+              <th>Opponent</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody id="games">
+          </tbody>
+        </table>
+
       </div>
     </main>
     <footer>&copy;<span id="year"></span> | Project | CSE 121b</footer>

@@ -9,57 +9,37 @@ let gameList = [];
 /* Step 4: async displayGames Function */
 const displayGames = (games) =>
   games.forEach((game) => {
-    const article = document.createElement("article");
-    const p1 = document.createElement("p");
-    p1.textContent = game.Date;
-		// const p2 = document.createElement("p");
-    // p2.textContent = game.Event;
-		// const p3 = document.createElement("p");
-    // p3.textContent = game.Location;
-		// const p4 = document.createElement("p");
-    // p4.textContent = game.Opponent;
-		// const p5 = document.createElement("p");
-    // p5.textContent = game.Time;
-		// const p6 = document.createElement("p");
-    // p6.textContent = game.templeName;
-    // const img = document.createElement("img");
-    // img.src = game.imageUrl;
-    // img.alt = game.location;
-    article.appendChild(p1);
-    // article.appendChild(p2);
-    // article.appendChild(p3);
-    // article.appendChild(p4);
-    // article.appendChild(p5);
-    // article.appendChild(p6);
-    // article.appendChild(img);
-    gamesElement.appendChild(article);
+    const tr = document.createElement("tr")
+    const tdDate = document.createElement("td")
+    const tdTime = document.createElement("td")
+    // const tdEvent = document.createElement("td")
+    const tdOpponent = document.createElement("td")
+    const tdLocation = document.createElement("td")
+
+    let date = new Date(game.Date).toLocaleDateString()
+    let time = new Date(game.Time).toLocaleTimeString()
+
+    tdDate.textContent = date
+    tdTime.textContent = time
+    tdOpponent.textContent = game.Opponent
+    tdLocation.textContent = game.Location
+    // tdEvent.textContent = game.Event
+    tr.appendChild(tdDate)
+    tr.appendChild(tdTime)
+    // tr.appendChild(tdEvent)
+    tr.appendChild(tdOpponent)
+    tr.appendChild(tdLocation)
+    gamesElement.appendChild(tr)
   });
 
 /* Step 5 async getGames Function using fetch()*/
 const getGames = async () => {
-  console.log('I made it inside getGames')
-  console.log(link);
   const response = await fetch(link);
-  // const response = await fetch(link2);
   if (response.ok) {
     gameList = await response.json();
-    console.log(gameList.data);
-		console.log(typeof(gameList));
   }
-  displayGames(gameList.data);
-};
-
-const getTemples = async () => {
-  // const response = await fetch(link);
-  const response = await fetch(link2);
-  if (response.ok) {
-    gameList = await response.json();
-    console.log(gameList);
-    // console.log(gameList.Array);
-    console.log(typeof(gameList));
-  }
-  // displayGames(gameList);
+  // const tr = document.createElement("tr")
+  displayGames(gameList.data)
 };
 
 getGames();
-// getTemples();
