@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSE 121b | Project </title>
+    <title>CSE 121b | Project</title>
     <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/project.css">
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/project.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Started looking into how to make a nav bar with tailwindcss -->
     <!-- https://flowbite.com/docs/components/navbar/ -->
@@ -22,7 +22,11 @@
   </head>
   <body>
     <nav>
-      <a href="https://michaelparkernorton.github.io/cse121b/final-project/index.html"  target="_blank" class="github"></a>
+      <a
+        href="https://michaelparkernorton.github.io/cse121b/final-project/index.html"
+        target="_blank"
+        class="github"
+      ></a>
       <ul id="menu">
         <li><a id="toggleMenu">&equiv;</a></li>
         <li><a href="../index.html">Home</a></li>
@@ -35,33 +39,38 @@
     </nav>
     <main>
       <div class="relative overflow-x-auto">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table
+          class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+        >
+          <thead
+            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          >
             <tr>
-              <th scope="col" class="px-6 py-3"></th>Date</th>
-              <th scope="col" class="px-6 py-3"></th>Time (ET)</th>
+              <th scope="col" class="px-6 py-3">Date</th>
+              <th scope="col" class="px-6 py-3">Time (ET)</th>
               <!-- <th>Event</th> -->
-              <th scope="col" class="px-6 py-3"></th>Opponent</th>
-              <th scope="col" class="px-6 py-3"></th>Location</th>
+              <th scope="col" class="px-6 py-3">Opponent</th>
+              <th scope="col" class="px-6 py-3">Location</th>
             </tr>
           </thead>
           <tbody id="games">
             <template data-template>
-              <tr data-tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <th data-date scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                </th>
-                <td data-time class="px-6 py-4">
-                </td>
-                <td data-opponent class="px-6 py-4">
-                </td>
-                <td data-location class="px-6 py-4">
-                </td>
-            </tr>
+              <tr
+                data-tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+              >
+                <th
+                  data-date
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                ></th>
+                <td data-time class="px-6 py-4"></td>
+                <td data-opponent class="px-6 py-4"></td>
+                <td data-location class="px-6 py-4"></td>
+              </tr>
             </template>
-            
           </tbody>
         </table>
-
       </div>
     </main>
     <footer>&copy;<span id="year"></span> | Project | CSE 121b</footer>
