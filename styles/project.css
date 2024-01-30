@@ -1,3 +1,10 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
 nav {
 	display: grid;
 	grid-template-columns: 1fr auto 1fr;
@@ -13,4 +20,11 @@ nav {
 
 ul#menu {
 	margin: 0;	
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background-color: blue; */
 }

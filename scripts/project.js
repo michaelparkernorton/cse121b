@@ -4,32 +4,26 @@ const link = `https://script.googleusercontent.com/macros/echo?user_content_key=
 const link2 = "https://strasburghs.rschoolteams.com/page/2981"
 /* Step 3: Declare and initialize global variables */
 const gamesElement = document.getElementById("games");
+const template = document.querySelector("[data-template]");
 let gameList = [];
 
 /* Step 4: async displayGames Function */
 const displayGames = (games) =>
   games.forEach((game) => {
-    const tr = document.createElement("tr")
-    const tdDate = document.createElement("td")
-    const tdTime = document.createElement("td")
-    // const tdEvent = document.createElement("td")
-    const tdOpponent = document.createElement("td")
-    const tdLocation = document.createElement("td")
-
+    const card = template.content.cloneNode(true).children[0]
+    const cardDate = card.querySelector("[data-date]")
+    const cardTime = card.querySelector("[data-time]")
+    const cardOpponent = card.querySelector("[data-opponent]")
+    const cardLocation = card.querySelector("[data-location]")
     let date = new Date(game.Date).toLocaleDateString()
     let time = new Date(game.Time).toLocaleTimeString()
 
-    tdDate.textContent = date
-    tdTime.textContent = time
-    tdOpponent.textContent = game.Opponent
-    tdLocation.textContent = game.Location
-    // tdEvent.textContent = game.Event
-    tr.appendChild(tdDate)
-    tr.appendChild(tdTime)
-    // tr.appendChild(tdEvent)
-    tr.appendChild(tdOpponent)
-    tr.appendChild(tdLocation)
-    gamesElement.appendChild(tr)
+    cardDate.textContent = date
+    cardTime.textContent = time
+    cardOpponent.textContent = game.Opponent
+    cardLocation.textContent = game.Location
+
+    gamesElement.append(card);
   });
 
 /* Step 5 async getGames Function using fetch()*/
