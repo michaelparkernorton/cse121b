@@ -2,6 +2,7 @@ const link = `https://script.googleusercontent.com/macros/echo?user_content_key=
 
 //THE SHS SCHEDULE PAGE
 const link2 = "https://strasburghs.rschoolteams.com/page/2981"
+const link3 = "../json/project.json"
 /* Step 3: Declare and initialize global variables */
 const gamesElement = document.getElementById("games");
 const template = document.querySelector("[data-template]");
@@ -28,7 +29,7 @@ const displayGames = (games) =>
 
 /* Step 5 async getGames Function using fetch()*/
 const getGames = async () => {
-  const response = await fetch(link);
+  const response = await fetch(link3);
   if (response.ok) {
     gameList = await response.json();
   }
