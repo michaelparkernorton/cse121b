@@ -1,0 +1,16 @@
+nav {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+}
+
+.github {
+	background-color: white;
+	height: 32px;
+	width: 32px;
+	align-self: center;
+	margin-left: 10px;
+}
+
+ul#menu {
+	margin: 0;	
+}
