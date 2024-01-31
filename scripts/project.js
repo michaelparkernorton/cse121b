@@ -23,6 +23,7 @@ function convertWinsLosses(result, type) {
   }
 }
 
+
 /* Step 4: async displayGames Function */
 const displayGames = (games) =>
   games.forEach((game) => {
@@ -58,8 +59,6 @@ const getGames = async () => {
   }
   // const tr = document.createElement("tr")
   displayGames(gameList.data)
-  console.log(goalsFor);
-  console.log(goalsAgainst);
   const initialValue = 0;
   const goalsForTotal = goalsFor.reduce((accumulator, currentValue) => accumulator + currentValue,
   initialValue,
@@ -73,10 +72,6 @@ const getGames = async () => {
   const lossesTotal = losses.reduce((accumulator, currentValue) => accumulator + currentValue,
     initialValue,
   );
-  console.log(goalsForTotal);
-  console.log(goalsAgainstTotal);
-  console.log(winsTotal);
-  console.log(lossesTotal);
 
   const card = template.content.cloneNode(true).children[0]
   const cardDate = card.querySelector("[data-date]")
@@ -93,6 +88,17 @@ const getGames = async () => {
   cardWL.textContent = `${winsTotal} - ${lossesTotal}`
 
   gamesElement.append(card);
+
+// Unfinished scoll feature
+  // const bodyRect = document.body.querySelector('main').getBoundingClientRect()
+
+  // const tr = document.querySelectorAll('tr')
+  // tr.forEach(tr => {
+  //   const rect = tr.getBoundingClientRect()
+  //   const offset = rect.top - bodyRect.top
+  //   tr.addEventListener('click', (e) => {scroll(0, offset)})
+  // });
+
 };
 
 getGames();
