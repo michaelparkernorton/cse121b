@@ -18,6 +18,8 @@ const displayGames = (games) =>
     const cardLocation = card.querySelector("[data-location]")
     let date = new Date(game.Date).toLocaleDateString()
     let time = new Date(game.Time).toLocaleTimeString('en-US', { hour: 'numeric', hour12: true })
+    console.log(game.Opponent)
+    
 
     cardDate.textContent = date
     cardTime.textContent = time
