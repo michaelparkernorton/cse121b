@@ -3,6 +3,7 @@ const link = `https://script.googleusercontent.com/macros/echo?user_content_key=
 //THE SHS SCHEDULE PAGE
 const link2 = "https://strasburghs.rschoolteams.com/page/2981"
 const link3 = "../json/project.json"
+const link4 = "../json/previousSeason.json"
 /* Step 3: Declare and initialize global variables */
 const gamesElement = document.getElementById("games");
 const template = document.querySelector("[data-template]");
@@ -16,22 +17,24 @@ const displayGames = (games) =>
     const cardTime = card.querySelector("[data-time]")
     const cardOpponent = card.querySelector("[data-opponent]")
     const cardLocation = card.querySelector("[data-location]")
+    const cardScore = card.querySelector("[data-score]")
+    const cardWL = card.querySelector("[data-w-l]")
     let date = new Date(game.Date).toLocaleDateString()
-    let time = new Date(game.Time).toLocaleTimeString('en-US', { hour: 'numeric', hour12: true })
-    console.log(game.Opponent)
-    
+    let time = new Date(game.Time).toLocaleTimeString('en-US', { hour: 'numeric', hour12: true })    
 
     cardDate.textContent = date
     cardTime.textContent = time
     cardOpponent.textContent = game.Opponent
     cardLocation.textContent = game.Location
+    cardScore.textContent = game.Score
+    cardWL.textContent = game['W/L']
 
     gamesElement.append(card);
   });
 
 /* Step 5 async getGames Function using fetch()*/
 const getGames = async () => {
-  const response = await fetch(link3);
+  const response = await fetch(link4);
   if (response.ok) {
     gameList = await response.json();
   }
