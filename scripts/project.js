@@ -38,3 +38,9 @@ const getGames = async () => {
 };
 
 getGames();
+
+
+// ADDITIONAL REQUIREMENTS
+// Include conditional branching.
+// Use an array method.
+// Exclusively use template literals when building strings.
