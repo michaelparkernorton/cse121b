@@ -28,3 +28,11 @@ ul#menu {
 main {
   margin: 100px 0;
 }
+
+.profile-nav:hover {
+  background-color: #581c87;
+}
+
+nav ul li a:hover {
+  background: #581c87;
+}
